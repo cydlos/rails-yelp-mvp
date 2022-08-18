@@ -1,0 +1,7 @@
+  <% restaurants.each do |restaurant| %>
+    <%= render restaurant %>
+    <p>
+      <%= link_to "Show this restaurant", restaurant, class: "btn btn-primary" %>
+    </p>
+  <% end %>
+

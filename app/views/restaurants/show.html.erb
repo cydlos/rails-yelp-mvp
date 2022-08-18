@@ -1,0 +1,14 @@
+<%= render @restaurant %>
+
+<h2><strong>Reviews</strong></h2>
+<ul class="list-group">
+  <% @restaurant.reviews.each do |review| %>
+    <li class="list-group-item">
+      <%= review.content %>
+      <%= review.rating %>
+    </li>
+  <% end %>
+</ul>
+
+<h2>Add a review</h2>
+<%= render "reviews/review_form", restaurant: @restaurant, review: @review %>
